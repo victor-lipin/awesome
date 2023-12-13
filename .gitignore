@@ -1,0 +1,16 @@
+/*
+
+!.gitignore
+!.xinitrc
+!README.md
+
+!/.config/
+/.config/*
+!/.config/alacritty
+!/.config/awesome
+!/.config/btop
+!/.config/gtk-3.0
+!/.config/qt5ct
+!/.config/scripts
+!/.config/vis
+

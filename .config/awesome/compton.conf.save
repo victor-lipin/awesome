@@ -1,0 +1,52 @@
+# ~/.config/awesome/compton.conf
+
+# Основные настройки
+backend = "glx";
+glx-no-stencil = true;
+glx-no-rebind-pixmap = true;
+vsync = true;
+
+# Прозрачность окон
+inactive-opacity = 0.9;  # Прозрачность неактивных окон (0.9 = 90% непрозрачности)
+active-opacity = 0.9;      # Прозрачность активных окон (1 = полностью непрозрачные)
+
+# Эффекты
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+fade-delta = 4;
+
+# Другие настройки
+shadow = true;
+no-dnd-shadow = true;
+no-dock-shadow = true;
+clear-shadow = true;
+shadow-radius = 7;
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-opacity = 0.5;
+
+opacity-rule = [ 
+  "100:class_g = 'Picture-in-Picture'",     # Устанавливаем 100% прозрачности для указанного класса
+  "100:name = 'Toolkit'",             # Устанавливаем 100% прозрачности для указанного имени
+];
+
+# Исключения (окна, для которых не применяются эффекты)
+shadow-exclude = [
+  "name = 'Notification'",
+  "name = 'Plank'",
+  "name = 'Docky'",
+  "name = 'Kupfer'",
+  "name = 'xfce4-notifyd'",
+  "name *= 'VLC'",
+  "name *= 'compton'",
+  "class_g = 'Conky'",
+  "class_g = 'Kupfer'",
+  "class_g = 'Synapse'",
+  "class_g = 'Guake'",
+  "class_g = 'Gnome-terminal'",
+  "class_g ?= 'Notify-osd'",
+  "class_g = 'Cairo-dock'",
+  "class_g = 'Xfce4-notifyd'",
+  "class_g = 'Xfce4-power-manager'"
+];
+
